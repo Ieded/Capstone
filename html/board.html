@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>CodeMind — 커뮤니티</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo"><div class="nav-logo-dot"></div> CodeMind</a>
+    <div class="nav-links">
+      <a href="ai.html" class="nav-link">🤖 AI 튜터</a>
+      <a href="note.html" class="nav-link">📝 오답노트</a>
+      <a href="code.html" class="nav-link">💻 코딩 연습</a>
+      <a href="board.html" class="nav-link active">👥 커뮤니티</a>
+    </div>
+  </nav>
+
+  <div style="max-width:1100px; margin:0 auto; padding:48px 40px;">
+    <div class="board-header">
+      <h1>👥 선후배 커뮤니티</h1>
+      <button class="btn-run" onclick="showToast('글쓰기 준비중', '✍️')">글쓰기</button>
+    </div>
+
+    <div class="board-tabs">
+      <div class="btab active" onclick="filterBoard('all', this)">전체</div>
+      <div class="btab" onclick="filterBoard('exam', this)">📂 족보</div>
+      <div class="btab" onclick="filterBoard('qna', this)">❓ 질문</div>
+    </div>
+
+    <div id="postList"></div>
+  </div>
+
+  <div id="toast" class="toast"><span id="toastIcon"></span><span id="toastMsg"></span></div>
+
+  <!-- 분리된 JS 파일들 불러오기 -->
+  <script src="/js/common.js"></script>
+  <script src="/js/board.js"></script>
+</body>
+</html>
